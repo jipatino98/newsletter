@@ -14,35 +14,61 @@
       Frontend Mentor | Newsletter sign-up form with success message
     </title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <link rel="stylesheet" ref="./style.css" />
-    <script src="./script.js"></script>
+    <!-- My CSS Stylesheets -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- My Script Files -->
+    <script src="./script.js" defer></script>
   </head>
   <body>
-    <!-- Sign-up form start -->
-    <div class="news-card">
-      <h1>Stay Updated!</h1>
-      <p>Join 60,000+ product managers receiving monthly updates on:</p>
-      <ul>
-        <li>Product discovery and building what matters</li>
-        <li>Measuring to ensure updates are a success</li>
-        <li>And much more!</li>
-      </ul>
+    <main>
+      <div class="newsletter">
+        <!-- Newsletter-Content -->
+        <div class="newsletter-content">
+          <h1 class="title-text">Stay Updated!</h1>
+          <p class="title-caption">
+            Join 60,000+ product managers recieving monthly updates on:
+          </p>
 
-      <!-- Sign-up form end -->
-      <form>
-        <label for="email">Email Address</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          placeholder="email@company.com"
-        />
-        <button id="subscribe-btn" type="submit">
-          Subscribe to monthly newsletter
-        </button>
-      </form>
-    </div>
+          <!-- newsletter list content -->
+          <div class="newsletter-list-container">
+            <ul class="newsletter-list">
+              <li>Product discovery and building what matters</li>
+              <li>Measuring to ensure updates are a success</li>
+              <li>And much more!</li>
+            </ul>
+          </div>
+
+          <!-- Form Container -->
+          <form>
+            <label for="email">Email Address</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="email@company.com"
+              required
+            />
+
+            <button class="button">Subscribe to monthly newsletter</button>
+          </form>
+        </div>
+
+        <!-- Newsletter Image -->
+        <picture class="newsletter-img">
+          <source
+            srcset="./assets/images/illustration-sign-up-desktop.svg"
+            media="(min-width: 600px)"
+          />
+          <img
+            src="assets/images/illustration-sign-up-mobile.svg"
+            alt="Illustration with a graph a positive
+                slope with browser window behind it"
+          />
+        </picture>
+      </div>
+    </main>
+
     <!-- Success message start -->
     <div class="confirm-card">
       <p class="confirm-text">

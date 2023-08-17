@@ -5,3 +5,21 @@
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+/* Custom CSS Properties */
+:root {
+  /* Primary Colors */
+  --clr-tomato: hsl(4, 100%, 67%);
+
+  /* Neutral Colors */
+  --clr-darkGrey: hsl(234, 29%, 20%);
+  --clr-charcoalGrey: hsl(235, 18%, 26%);
+  --clr-grey: hsl(231, 7%, 60%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  /* Font Family*/
+  --ff-base: "Roboto", sans-serif;
+  /* Font Weight*/
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
