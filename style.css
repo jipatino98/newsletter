@@ -113,7 +113,7 @@ body {
   gap: var(--content-spacing);
   padding: var(--content-padding);
   order: 1;
-  text-align: center;
+  text-align: left;
 }
 
 .title-text {
@@ -129,4 +129,30 @@ body {
 ul {
   display: grid;
   gap: 0.625rem;
+  list-style-image: url("./assets/images/icon-list.svg");
+}
+
+ul[data-icon="check-icon"]::before {
+  content: attr(url("./assets/images/icon-list.svg"));
+  background-image: url("./assets/images/icon-list.svg");
+  width: 9px;
+  height: 6px;
+}
+
+/* Form CSS */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
+  color: var(--clr-darkGrey);
+  text-shadow: 0 1px 6px grey;
+  font-weight: var(--fw-bold);
+}
+
+input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d8d8d8;
+  margin-bottom: 1.5rem;
 }
