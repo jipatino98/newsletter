@@ -81,18 +81,28 @@ body {
   color: var(--clr-darkGrey);
   background-color: var(--clr-darkGrey);
 
-  display: grid;
-  place-content: center;
+  display: column;
+  justify-content: center;
+  align-items: center;
   margin: 1rem;
+  border: blue 2px solid;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: red 2px solid;
 }
 
 /* newsletter container */
 .newsletter {
   --content-padding: 1.5rem;
   --content-spacing: 1rem;
-  max-width: 900px;
+  max-width: 600px;
   display: grid;
-  place-items: center;
+  border-radius: 0.5rem;
   background-color: var(--clr-white);
   overflow: hidden;
 }
@@ -100,6 +110,7 @@ body {
 @media (min-width: 600px) {
   .newsletter {
     --content-padding: 2rem;
+    padding: var(--content-spacing);
     grid-template-columns: 1fr 1fr;
   }
 
@@ -109,14 +120,20 @@ body {
 }
 
 .newsletter-img {
+  width: 100%;
+  border: purple solid 2px;
 }
 
+img {
+  width: 100%;
+}
 .newsletter-content {
   display: grid;
   gap: var(--content-spacing);
   padding: var(--content-padding);
   order: 1;
   text-align: left;
+  border: blue solid 2px;
 }
 
 .title-text {
@@ -129,17 +146,17 @@ body {
   text-align: left;
 }
 
-ul {
+.newsletter-list {
   display: flex;
   flex-direction: column;
+  justify-content: start;
   border: 1px red solid;
-  list-style: none;
-  /* list-style-image: url("./assets/images/icon-list.svg"); */
+  gap: 2.68rem;
+  list-style-image: url("./assets/images/icon-list.svg");
 }
 
-ul li[data-icon="check-icon"]::before {
-  content: url("./assets/images/icon-list.svg");
-  width: 0.5rem;
+.newsletter li {
+  align-items: end;
 }
 
 /* Form CSS */
@@ -177,4 +194,33 @@ input:is(:hover) {
 .button:is(:hover, :focus) {
   background-color: var(--clr-tomato);
   cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.confirm-card img {
+  width: 4rem;
+  margin-bottom: 2.5rem;
+}
+
+.confirm-card {
+  background-color: var(--clr-white);
+  max-width: 600px;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.confirm-card:last-child {
+  justify-content: flex-end;
+}
+
+.confirm-title {
+  margin-bottom: 1.5rem;
+}
+
+.dismiss-button {
 }

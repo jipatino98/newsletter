@@ -30,7 +30,7 @@
   </head>
   <body>
     <main>
-      <div class="newsletter">
+      <div class="newsletter hidden">
         <!-- Newsletter-Content -->
         <div class="newsletter-content">
           <h1 class="title-text">Stay Updated!</h1>
@@ -62,7 +62,9 @@
               required
             />
 
-            <button class="button">Subscribe to monthly newsletter</button>
+            <button id="subscribe-btn" class="button">
+              Subscribe to monthly newsletter
+            </button>
           </form>
         </div>
 
@@ -79,24 +81,27 @@
           />
         </picture>
       </div>
+
+      <!-- Success message start -->
+      <div class="confirm-card">
+        <img src="assets/images/icon-list.svg" />
+        <h2 class="confirm-title">Thanks for subscribing!</h2>
+        <p class="confirm-text">
+          A confirmation email has been sent to ash@loremcompany.com. Please
+          open it and click the button inside to confirm your subscription.
+          Dismiss message
+        </p>
+        <button class="dismiss-button">Dismiss message</button>
+      </div>
+
+      <!-- Success message end -->
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
     </main>
-
-    <!-- Success message start -->
-    <div class="confirm-card">
-      <p class="confirm-text">
-        Thanks for subscribing! A confirmation email has been sent to
-        ash@loremcompany.com. Please open it and click the button inside to
-        confirm your subscription. Dismiss message
-      </p>
-    </div>
-
-    <!-- Success message end -->
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
   </body>
 </html>
